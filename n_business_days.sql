@@ -1,5 +1,7 @@
--- SQL version of 'n_business_days.py'.
-
+/*
+ * SQL version of 'n_business_days.py'.
+ */
+ 
 DECLARE @RunDate datetime
 DECLARE @counter INT 
 DECLARE @yesterday datetime 
