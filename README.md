@@ -1,3 +1,3 @@
 # Business Days 
 
-Class to handle calendar tasks in a business setting. 
+This is a class to handle calendar tasks in a business setting. 
