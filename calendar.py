@@ -22,16 +22,18 @@ class Calendar:
 
     def iso_equal(self):
         """
-        Determines if the first partial week of the year and the first ISO week are the same week number. 
+        Determines if the first partial week of the year and the first ISO week have the same week number. 
+        Monday = 0, Tuesday = 1, ... , Sunday = 6
         """
 
         if date(self.time_stamp.year, 1, 1).weekday() in (0, 1, 2, 3, 6):
             return True
         return False
 
-    def get_week(self):
+    def current_week(self):
         """
-        Returns the current week number.
+        Returns the current week number, including the first partial week.
+        Monday = 0, Tuesday = 1, ... , Sunday = 6
         Input: self
         Output: integer
         """
@@ -44,7 +46,7 @@ class Calendar:
 
     def reporting_week(self):
         """
-        Prints the week number for reporting. 
+        Prints the week number for reporting, includes the first partial week. 
         Input: Self
         Output: None
         """
@@ -52,8 +54,8 @@ class Calendar:
         print("Week Numbers:")
         print(self.time_stamp)
         print(self.time_stamp_iso)
-        print("Current = {}".format(self.get_week()))
-        print("Reporting = {}".format(self.get_week() - 1))
+        print("Current = {}".format(self.current_week()))
+        print("Reporting = {}".format(self.current_week() - 1))
 
     def leap_year(self):
         """
